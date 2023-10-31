@@ -1,0 +1,63 @@
+$circle-color1: #4e89ae;
+$circle-color2: #43658b;
+$circle-color3: #ed6663;
+$circle-color4: #ffa372;
+
+$rectangle-color1: #4e89ae;
+$rectangle-color2: #43658b;
+$rectangle-color3: #ed6663;
+$rectangle-color4: #ffa372;
+
+footer {
+  height: 50px;
+  background-color: #8ccff7;
+}
+
+header {
+  background-color: #8ccff7;
+  width: 800px;
+  height: 400px;
+  margin-top: 0;
+}
+body {
+  margin: 0;
+}
+.rectangle1-div {
+  background-color: $rectangle-color1;
+}
+
+.rectangle2-div {
+  background-color: $rectangle-color2;
+}
+
+.rectangle3-div {
+  background-color: $rectangle-color3;
+}
+
+.rectangle4-div {
+  background-color: $rectangle-color4;
+}
+
+.circle1-div {
+  background-color: $circle-color1;
+  border-radius: 70px;
+}
+
+.circle2-div {
+  background-color: $circle-color2;
+  border-radius: 80px;
+}
+
+.circle3-div {
+  background-color: $circle-color3;
+  border-radius: 90px;
+}
+
+.circle4-div {
+  background-color: $circle-color4;
+  border-radius: 100px;
+}
+
+.container:hover {
+  background-color: #444;
+}
