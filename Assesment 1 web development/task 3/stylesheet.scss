@@ -1,63 +1,142 @@
-$circle-color1: #4e89ae;
-$circle-color2: #43658b;
-$circle-color3: #ed6663;
-$circle-color4: #ffa372;
+$base: #8ccff7;
+$color1: #4e89ae;
+$color2: #43658b;
+$color3: #ed6663;
+$color4: #ffa372;
+$colorhover: #444;
 
-$rectangle-color1: #4e89ae;
-$rectangle-color2: #43658b;
-$rectangle-color3: #ed6663;
-$rectangle-color4: #ffa372;
-
-footer {
-  height: 50px;
-  background-color: #8ccff7;
+/* Centering mixin */
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-header {
-  background-color: #8ccff7;
-  width: 800px;
-  height: 400px;
-  margin-top: 0;
-}
+/* Reset CSS */
+*,
 body {
   margin: 0;
-}
-.rectangle1-div {
-  background-color: $rectangle-color1;
-}
-
-.rectangle2-div {
-  background-color: $rectangle-color2;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.rectangle3-div {
-  background-color: $rectangle-color3;
+/* Media Queries for Sizing image */
+@mixin box-sizing {
+  @media screen and (max-width: 800px) {
+    div {
+      width: 300px;
+      height: 300px;
+      background-image: url(https://via.placeholder.com/300);
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    div {
+      width: 200px;
+      height: 200px;
+      background-image: url(https://via.placeholder.com/200);
+    }
+  }
 }
 
-.rectangle4-div {
-  background-color: $rectangle-color4;
+/* mixin for circle orientation */
+@mixin circle-orientation {
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
 }
 
-.circle1-div {
-  background-color: $circle-color1;
-  border-radius: 70px;
+/* Css for header */
+header {
+  width: 100%;
+  background-color: $base;
+
+  @include center-flex();
+
+  div {
+    width: 400px;
+    height: 400px;
+    background-image: url(https://via.placeholder.com/400);
+  }
+
+  @include box-sizing();
 }
 
-.circle2-div {
-  background-color: $circle-color2;
-  border-radius: 80px;
+/* Css for Rectangles */
+#rectangles {
+  width: 100%;
+  height: 300px;
+
+  @include center-flex();
+  flex-direction: column;
+
+  div {
+    width: 100%;
+    height: 50px;
+  }
+
+  .rectangle1 {
+    background-color: $color1;
+  }
+
+  .rectangle2 {
+    background-color: $color2;
+  }
+
+  .rectangle3 {
+    background-color: $color3;
+  }
+
+  .rectangle4 {
+    background-color: $color4;
+  }
 }
 
-.circle3-div {
-  background-color: $circle-color3;
-  border-radius: 90px;
+/* Css for Rectangles */
+#circles {
+  width: 100%;
+
+  @include center-flex();
+  gap: 10px;
+  @include circle-orientation();
+
+  .circle1 {
+    background-color: $color1;
+    border-radius: 70px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .circle2 {
+    background-color: $color2;
+    border-radius: 80px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .circle3 {
+    background-color: $color3;
+    border-radius: 90px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .circle4 {
+    background-color: $color4;
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+  }
 }
 
-.circle4-div {
-  background-color: $circle-color4;
-  border-radius: 100px;
+/* CSS For hover effect */
+.hover:hover {
+  background-color: $colorhover !important;
 }
 
-.container:hover {
-  background-color: #444;
+/* footer css */
+footer {
+  margin-top: 50px;
+  height: 50px;
+  background-color: $base;
 }
