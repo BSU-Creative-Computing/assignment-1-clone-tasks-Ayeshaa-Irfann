@@ -10,7 +10,14 @@ body {
   height: 100vh;
   background-color: lightgray;
 }
-
+.dropdown {
+  position: absolute;
+  margin-left: 72%;
+  font-size: 15px;
+  margin-top: 15px;
+  color: white;
+  opacity: 0;
+}
 nav {
   display: flex;
   width: 100%;
@@ -137,5 +144,13 @@ article {
 
   article {
     grid-template-columns: 50% 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  nav ol {
+    display: none;
+  }
+  .dropdown {
+    opacity: 1;
   }
 }
