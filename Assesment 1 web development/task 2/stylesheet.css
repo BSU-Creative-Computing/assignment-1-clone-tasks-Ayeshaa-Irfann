@@ -111,6 +111,11 @@ article {
   grid-template-columns: 50% 50%;
 }
 
+footer {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 30px;
+}
 @media screen and (max-width: 1279px) {
   main > section {
     flex: 2;
@@ -146,11 +151,30 @@ article {
     grid-template-columns: 50% 50%;
   }
 }
+@media screen and (max-width: 700px) {
+  nav ol {
+    display: none;
+  }
+  .dropdown {
+    opacity: 1;
+  }
+
+  article .container {
+    margin-top: 80px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   nav ol {
     display: none;
   }
   .dropdown {
     opacity: 1;
+  }
+
+  article .container {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
   }
 }
