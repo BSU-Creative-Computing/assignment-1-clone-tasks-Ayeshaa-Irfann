@@ -171,10 +171,4 @@ footer {
   .dropdown {
     opacity: 1;
   }
-
-  article .container {
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column;
-  }
 }
